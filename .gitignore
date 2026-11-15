@@ -1,0 +1,5 @@
+__pycache__/
+*.passlog*
+*.part.mp4
+.env
+.claude/

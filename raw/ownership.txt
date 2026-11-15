@@ -1,0 +1,39 @@
+This notice exists to inform visitors of the ownership transfer as of
+September 19th, 2022.
+
+This website was transferred to a new owner to protect the identities of past
+contributors. We are a neutral party now in control of the domain and the
+GitHub repository.
+
+This can be checked very easily by running a whois or dig on the domain name.
+
+////////////////////////////////////////////////////////////////////////////////
+
+# whois diyhrt.wiki
+---
+Updated Date: 2022-09-19T04:43:16Z
+Creation Date: 2022-07-18T14:51:14Z
+Registry Expiry Date: 2023-07-18T14:51:14Z
+---
+Name Server: braelyn.ns.cloudflare.com
+Name Server: langston.ns.cloudflare.com
+---
+
+# dig diyhrt.wiki
+;; ANSWER SECTION:
+diyhrt.wiki.    300     IN      A       185.199.109.153
+diyhrt.wiki.    300     IN      A       185.199.111.153
+diyhrt.wiki.    300     IN      A       185.199.110.153
+diyhrt.wiki.    300     IN      A       185.199.108.153
+
+# dig www.diyhrt.wiki
+;; ANSWER SECTION:
+www.diyhrt.wiki.        300     IN      A       104.21.93.29
+www.diyhrt.wiki.        300     IN      A       172.67.203.127
+
+////////////////////////////////////////////////////////////////////////////////
+
+The database records above have been reformatted for convenience, but their
+data has not been altered. Anyone is able to verify this independently.
+
+We have been requested to put up this notice as of October 1st, 2022.

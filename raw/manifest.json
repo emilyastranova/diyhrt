@@ -1,0 +1,194 @@
+{
+ "fetched_at": "2026-11-15T22:45:29Z",
+ "files": {
+  "https://diyhrt.wiki/": {
+   "path": "index.html",
+   "type": "text/html"
+  },
+  "https://diyhrt.wiki/404.html": {
+   "path": "404.html",
+   "type": "text/html"
+  },
+  "https://diyhrt.wiki/age-check.html": {
+   "path": "age-check.html",
+   "type": "text/html"
+  },
+  "https://diyhrt.wiki/age-check.js": {
+   "path": "age-check.js",
+   "type": "application/javascript"
+  },
+  "https://diyhrt.wiki/apps": {
+   "path": "apps.html",
+   "type": "text/html"
+  },
+  "https://diyhrt.wiki/bloodtests": {
+   "path": "bloodtests.html",
+   "type": "text/html"
+  },
+  "https://diyhrt.wiki/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js": {
+   "path": "cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+   "type": "application/javascript"
+  },
+  "https://diyhrt.wiki/cow.txt": {
+   "path": "cow.txt",
+   "type": "text/plain"
+  },
+  "https://diyhrt.wiki/css/404.css": {
+   "path": "css/404.css",
+   "type": "text/css"
+  },
+  "https://diyhrt.wiki/css/main.css": {
+   "path": "css/main.css",
+   "type": "text/css"
+  },
+  "https://diyhrt.wiki/images/404.jpg": {
+   "path": "images/404.jpg",
+   "type": "image/jpeg"
+  },
+  "https://diyhrt.wiki/images/apps.png": {
+   "path": "images/apps.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/banner2.png": {
+   "path": "images/banner2.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/blood.png": {
+   "path": "images/blood.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/content/TTable.png": {
+   "path": "images/content/TTable.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/content/YEEDF9Z.png": {
+   "path": "images/content/YEEDF9Z.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/content/rqaGsfa.png": {
+   "path": "images/content/rqaGsfa.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/doc.png": {
+   "path": "images/doc.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/embed.png": {
+   "path": "images/embed.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/favicon_io/apple-touch-icon.png": {
+   "path": "images/favicon_io/apple-touch-icon.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/favicon_io/favicon-16x16.png": {
+   "path": "images/favicon_io/favicon-16x16.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/favicon_io/favicon-32x32.png": {
+   "path": "images/favicon_io/favicon-32x32.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/femme.png": {
+   "path": "images/femme.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/home.png": {
+   "path": "images/home.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/kofi.png": {
+   "path": "images/kofi.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/mail.png": {
+   "path": "images/mail.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/masc.png": {
+   "path": "images/masc.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/needle2.png": {
+   "path": "images/needle2.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/needles.png": {
+   "path": "images/needles.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/images/sean.jpg": {
+   "path": "images/sean.jpg",
+   "type": "image/jpeg"
+  },
+  "https://diyhrt.wiki/images/title.png": {
+   "path": "images/title.png",
+   "type": "image/png"
+  },
+  "https://diyhrt.wiki/index": {
+   "path": "index.html",
+   "type": "text/html"
+  },
+  "https://diyhrt.wiki/injectionsupplies": {
+   "path": "injectionsupplies.html",
+   "type": "text/html"
+  },
+  "https://diyhrt.wiki/nav.html": {
+   "path": "nav.html",
+   "type": "text/html"
+  },
+  "https://diyhrt.wiki/nav.js": {
+   "path": "nav.js",
+   "type": "application/javascript"
+  },
+  "https://diyhrt.wiki/ownership.txt": {
+   "path": "ownership.txt",
+   "type": "text/plain"
+  },
+  "https://diyhrt.wiki/robots.txt": {
+   "path": "robots.txt",
+   "type": "text/plain"
+  },
+  "https://diyhrt.wiki/transfem": {
+   "path": "transfem.html",
+   "type": "text/html"
+  },
+  "https://diyhrt.wiki/transmasc": {
+   "path": "transmasc.html",
+   "type": "text/html"
+  },
+  "https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap": {
+   "path": "_ext/fonts.googleapis.com/css2.ac955eaba8.css",
+   "type": "text/css"
+  },
+  "https://fonts.googleapis.com/css?family=Aref%20Ruqaa": {
+   "path": "_ext/fonts.googleapis.com/css.329f7727c8.css",
+   "type": "text/css"
+  },
+  "https://fonts.googleapis.com/css?family=Comfortaa": {
+   "path": "_ext/fonts.googleapis.com/css.8cf2f1d49a.css",
+   "type": "text/css"
+  },
+  "https://fonts.gstatic.com/s/arefruqaa/v26/WwkbxPW1E165rajQKDulIIcoUA.ttf": {
+   "path": "_ext/fonts.gstatic.com/s/arefruqaa/v26/WwkbxPW1E165rajQKDulIIcoUA.ttf",
+   "type": "font/ttf"
+  },
+  "https://fonts.gstatic.com/s/comfortaa/v47/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMDrMfJQ.ttf": {
+   "path": "_ext/fonts.gstatic.com/s/comfortaa/v47/1Pt_g8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMDrMfJQ.ttf",
+   "type": "font/ttf"
+  },
+  "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf": {
+   "path": "_ext/fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf",
+   "type": "font/ttf"
+  }
+ },
+ "skipped": {
+  "https://diyhrt.wiki/CNAME": "HTTP 404",
+  "https://diyhrt.wiki/cdn-cgi/l/email-protection": "HTTP 404",
+  "https://diyhrt.wiki/contact": "robots.txt",
+  "https://diyhrt.wiki/contact.html": "robots.txt",
+  "https://diyhrt.wiki/favicon.ico": "HTTP 404",
+  "https://diyhrt.wiki/site.webmanifest": "HTTP 404",
+  "https://diyhrt.wiki/sitemap.xml": "HTTP 404"
+ }
+}
