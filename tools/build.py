@@ -29,7 +29,7 @@ TEXT_EXT = (".html", ".htm", ".css", ".js", ".json", ".webmanifest", ".txt", ".x
 BANNER = """
 <!-- mirror banner (added by the diyhrt mirror build) -->
 <style>
-#mirror-banner{{position:fixed;left:0;right:0;bottom:0;z-index:2147483647;
+#mirror-banner{{position:fixed;left:0;bottom:0;width:100%;z-index:2147483647;
   display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
   padding:10px 44px 10px 16px;box-sizing:border-box;
   background:linear-gradient(to right,#0f59d1,#630d4e);color:#fff;
@@ -48,7 +48,32 @@ body{{padding-bottom:64px}}
   <button type="button" aria-label="Hide this notice"
     onclick="this.parentNode.style.display='none';document.body.style.paddingBottom='0';try{{sessionStorage.setItem('mirrorBannerHidden','1')}}catch(e){{}}">&times;</button>
 </div>
-<script>try{{if(sessionStorage.getItem('mirrorBannerHidden')){{document.getElementById('mirror-banner').style.display='none';document.body.style.paddingBottom='0'}}}}catch(e){{}}</script>
+<script>
+(function(){{
+  var b=document.getElementById('mirror-banner');
+  try{{if(sessionStorage.getItem('mirrorBannerHidden')){{b.style.display='none';document.body.style.paddingBottom='0';return}}}}catch(e){{}}
+  // If anything on the page is wider than a phone, mobile browsers stretch the layout
+  // viewport and a bottom:0 banner lands below the visible screen. Pin it to the
+  // visual viewport (what's actually on screen) instead.
+  var vv=window.visualViewport;
+  if(!vv)return;
+  function place(){{
+    var stretched=window.innerHeight-vv.height*vv.scale>30||window.innerWidth-vv.width*vv.scale>30; // >30: ignore scrollbars
+    if(!stretched){{b.style.top=b.style.left=b.style.width=b.style.bottom='';return}}
+    b.style.bottom='auto';b.style.left=vv.offsetLeft+'px';b.style.width=vv.width+'px';
+    b.style.top=(vv.offsetTop+vv.height-b.offsetHeight)+'px';
+  }}
+  var queued=false;
+  function schedule(){{if(!queued){{queued=true;requestAnimationFrame(function(){{queued=false;place()}})}}}}
+  // Content that widens the page (fetched nav menu, age check, late images) fires
+  // no resize event, so also re-check on DOM changes, at load and shortly after.
+  vv.addEventListener('resize',schedule);vv.addEventListener('scroll',schedule);
+  window.addEventListener('resize',schedule);
+  window.addEventListener('load',function(){{schedule();setTimeout(schedule,2000)}});
+  if(window.MutationObserver)new MutationObserver(schedule).observe(document.body,{{childList:true,subtree:true}});
+  place();
+}})();
+</script>
 <!-- /mirror banner -->
 """
 
@@ -155,7 +180,10 @@ def main():
                               else r"(<head[^>]*>)")
                     text = re.sub(anchor,
                                   r'\1\n    <meta name="color-scheme" content="light">'
-                                  r'\n    <style>html{background:#fff;color-scheme:light}</style>',
+                                  r'\n    <style>html{background:#fff;color-scheme:light}'
+                                  # Long bare URLs in the text overflow phone screens
+                                  # (sideways scrolling); let them wrap.
+                                  r'a{overflow-wrap:anywhere}</style>',
                                   text, count=1, flags=re.I)
                 orig_url = page_url(rel)
                 banner = BANNER.format(orig=html.escape(orig_url),

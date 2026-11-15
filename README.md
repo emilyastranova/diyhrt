@@ -115,6 +115,8 @@ Changes the mirror makes beyond the banner:
   background). The original never sets a background, so browsers that paint a dark
   canvas in dark mode render its grey text almost invisibly. The original has that
   problem too.
+- Long links wrap (`overflow-wrap: anywhere`). On the original, a long bare URL on
+  /transfem makes the page wider than a phone screen, so it scrolls sideways.
 - Video, poster and caption URLs carry a `?v=` version tag, so browsers never keep a
   stale copy after a re-sync (nginx lets them cache media for a week).
 
