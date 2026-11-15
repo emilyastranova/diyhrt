@@ -4,11 +4,41 @@ A static, self-contained mirror of <https://diyhrt.wiki>. Every page has a banne
 pinned to the bottom that links to the matching page on the original site, plus a
 `rel=canonical` link pointing there so search engines credit the original.
 
+## Get the files (Git LFS required)
+
+The videos are stored with [Git LFS](https://git-lfs.com). Without it, git checks
+out tiny text placeholders instead of the MP4s, and the players show
+*"No video with supported format and MIME type found"*. Install LFS **before**
+cloning (Alpine: `apk add git-lfs`, Debian/Ubuntu: `apt install git-lfs`,
+Fedora: `dnf install git-lfs`), then:
+
+```bash
+git lfs install
+```
+
+```bash
+git clone git@github.com:emilyastranova/diyhrt.git
+```
+
+Already cloned without LFS? Fetch the real files into the existing checkout:
+
+```bash
+git lfs install && git lfs pull
+```
+
+To check, `git lfs ls-files` should mark every video with `*` (downloaded), not
+`-` (placeholder only). Each `site/_videos/*.mp4` should be tens of MB, not ~130
+bytes. On a server, `git pull` fetches LFS files automatically once LFS is
+installed.
+
 ## Run it
 
 ```bash
 docker compose up -d
 ```
+
+To keep a different port without typing it every time, `cp .env.example .env` and
+edit `MIRROR_PORT`.
 
 That serves `site/` with nginx on <http://localhost:8080>. If 8080 is taken, pick
 another host port:
@@ -99,11 +129,8 @@ What's left out on purpose:
 
 The repo uses **Git LFS for `*.mp4`** (see `.gitattributes`). The original video
 downloads are about 105 MB each, over GitHub's hard 100 MB per-file limit, and keeping
-video in plain git would bloat every clone forever. Install LFS once before cloning:
-
-```bash
-sudo dnf install git-lfs && git lfs install
-```
+video in plain git would bloat every clone forever. See
+[Get the files](#get-the-files-git-lfs-required) for setup.
 
 LFS stores files by content hash, so identical files count once. `videos.py` takes
 advantage of that: a video that only needed a lossless remux is byte-identical in
